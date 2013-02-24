@@ -9,7 +9,7 @@ var PhoneNumber = function(phoneNumber)
 		return false;
 	};
 };
-console.log(PhoneNumber("000-000-0000"));
+//console.log(PhoneNumber("000-000-0000"));
 
 var EmailAddress = function(address)
 {
@@ -22,12 +22,22 @@ var EmailAddress = function(address)
 		return false;
 	};
 };
-console.log(EmailAddress("edcombs@gmail.com"));
+//console.log(EmailAddress("edcombs@gmail.com"));
 
 var URL = function(url)
-{
-
+{	
+	if (url.startsWith("http://") || url.startsWith("https://"))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	};
 };
+//console.log(URL("http://adasdaa"));
+//console.log(URL("https://aasdads"));
+//console.log(URL("dhttp://"));
 
 var TitleCase = function(string)
 {
