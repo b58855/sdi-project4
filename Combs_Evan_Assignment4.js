@@ -41,8 +41,24 @@ var URL = function(url)
 
 var TitleCase = function(string)
 {
-
+	var strings = string.split(" ", -1);
+	var newString = "";
+	//console.log(string)
+	//console.log(strings);
+	for (var i = 0; i < strings.length; i++)
+	{
+		var r = strings[i].charAt(0);
+		//console.log(r);
+		var j = strings[i].split(r, 2);
+		//console.log(j);
+		strings[i] = r.toUpperCase() + j[1];
+		//console.log(strings[i]);
+		newString = newString + strings[i] + " ";
+		//console.log(newString);
+	};	
+	return newString;
 };
+//console.log(TitleCase("hello world"));
 
 var StringSeperators = function(string)
 {
