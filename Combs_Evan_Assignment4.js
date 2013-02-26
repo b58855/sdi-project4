@@ -67,8 +67,13 @@ var StringSeperators = function(string)
 
 var Decimal = function(number, decimals)
 {
-	
+	var num = number;
+	var dec = decimals;
+	console.log(dec);
+	num = num.toFixed(dec);
+	console.log(num);
 };
+Decimal(4.53222, 2);
 
 var FuzzyMatch = function(number, percentage)
 {
@@ -110,7 +115,7 @@ var SmallestValue = function(array, number)
 
 var TotalValue = function(array)
 {
-
+	
 };
 
 var ShortByKey = function(object, key)
