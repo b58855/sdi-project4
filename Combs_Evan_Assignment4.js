@@ -55,7 +55,7 @@ var MyLib = function()
 		return newString;
 	};
 	//formats a number to a certain number of decimals
-	var DecimalPLace = function(number, decimals)
+	var DecimalPlace = function(number, decimals)
 	{
 		var num = number;
 		var dec = decimals;
@@ -117,7 +117,7 @@ var MyLib = function()
 			}
 		}
 		return newNumber;
-	};
+};
 	
 	return{
 		PhoneNumber: PhoneNumber,
