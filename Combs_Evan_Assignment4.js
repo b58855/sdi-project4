@@ -60,37 +60,62 @@ var TitleCase = function(string)
 };
 //console.log(TitleCase("hello world"));
 
-var StringSeperators = function(string)
-{
-
-};
-
-var Decimal = function(number, decimals)
+var DecimalPLace = function(number, decimals)
 {
 	var num = number;
 	var dec = decimals;
-	console.log(dec);
+	//console.log(dec);
 	num = num.toFixed(dec);
-	console.log(num);
+	//console.log(num);
 };
-Decimal(4.53222, 2);
+//DecimalPlace(4.53222, 2);
 
-var FuzzyMatch = function(number, percentage)
+var FuzzyMatch = function(number1, number2, percentage)
 {
-
+	var num1 = number1;
+	//console.log(num1);
+	var num2 = number2;
+	//console.log(num2);
+	var perc = percentage * .01;
+	//console.log(perc);
+	var withinPerc;
+	var answer;
+	
+	if (num1 - num2 < 0)
+	{
+		withinPerc = num2 * perc;
+		//console.log("within " + withinPerc);
+		if (num2 - num1 <= withinPerc)
+		{
+			answer = num1 + " is less than " + num2 + " and they are within " + percentage + "% of each other.";		
+		}
+		else
+		{
+			answer = num1 + " is less than " + num2 + " and they are not within " + percentage + "% of each other.";
+		}
+	}
+	else if (num1 - num2 > 0)
+	{
+		withinPerc = num1 * perc;
+		//console.log("within " + withinPerc);
+		if (num1 - num2 <= withinPerc)
+		{
+			answer = num1 + " is greater than " + num2 + " and they are within " + percentage + "% of each other.";
+		}
+		else
+		{
+			answer = num1 + " is greater than " + num2 + " and they are not within " + percentage + "% of each other.";
+		}
+	}
+	else
+	{
+		answer = num1 + " is equal to " + num2 + ".";
+	}
+	
+	return answer;
 };
 
-var TimeDifference = function(time1, time2)
-{
-
-};
-
-var StringToNumber = function(string)
-{
-
-};
-
-var SmallestValue = function(array, number)
+var SmallestValueAbove = function(array, number)
 {
 	//console.log(array);
 	//console.log(number);
@@ -111,14 +136,4 @@ var SmallestValue = function(array, number)
 	return newNumber;
 };
 //var array = [18,32,47,19,38,25];
-//SmallestValue(array, 33);
-
-var TotalValue = function(array)
-{
-	
-};
-
-var ShortByKey = function(object, key)
-{
-
-};
+//SmallestValueAbove(array, 33);
