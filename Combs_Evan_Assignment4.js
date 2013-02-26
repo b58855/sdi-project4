@@ -60,6 +60,7 @@ var MyLib = function()
 		var num = number;
 		var dec = decimals;
 		num = num.toFixed(dec);
+		return num;
 	};
 	//finds if the number1 is greater than or less than number2 and if they are within a certain percentage of each other
 	var FuzzyMatch = function(number1, number2, percentage)
