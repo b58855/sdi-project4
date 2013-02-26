@@ -67,7 +67,7 @@ var StringSeperators = function(string)
 
 var Decimal = function(number, decimals)
 {
-
+	
 };
 
 var FuzzyMatch = function(number, percentage)
@@ -85,10 +85,28 @@ var StringToNumber = function(string)
 
 };
 
-var SmallestValue = function(array)
+var SmallestValue = function(array, number)
 {
-
+	//console.log(array);
+	//console.log(number);
+	var newArray = array;
+	//console.log(newArray);
+	var nextNumber;
+	newArray.sort();
+	//console.log(newArray);
+	for (var i = 0; i < newArray.length; i++)
+	{
+		if (newArray[i] > number)
+		{
+			newNumber = newArray[i];
+			break;
+		}
+	}
+	//console.log(newNumber);
+	return newNumber;
 };
+//var array = [18,32,47,19,38,25];
+//SmallestValue(array, 33);
 
 var TotalValue = function(array)
 {
